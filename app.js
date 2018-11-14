@@ -1,7 +1,7 @@
 //This whole function executes once the page is loaded
 function onReady() {
   let id = 0;
-  const toDos = [];
+  let toDos = [];
   const addToDoForm = document.getElementById('addToDoForm');
 
 //This creates the toDo list
@@ -31,7 +31,7 @@ function renderTheUI() {
             const newLi = document.createElement('li');
             const checkbox = document.createElement('input');
             const deleteBtn = document.createElement('button');
-            deleteBtn.innerHTML = '<span>Delete</span>';
+            deleteBtn.appendChild(document.createTextNode('delete'));
             checkbox.type = "checkbox";
             newLi.textContent = toDo.title;
             toDoList.appendChild(newLi);
