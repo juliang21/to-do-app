@@ -39,8 +39,7 @@ function renderTheUI() {
             newLi.appendChild(deleteBtn);
             //This is the event listener. When someone clicks on the delete button, it triggers the function to delete and re-renders the UI
             deleteBtn.addEventListener('click', () => {
-              toDo.deleteToDo(toDo.id);
-              renderTheUI();
+              toDos = deleteToDo(toDo.id); renderTheUI();
             });
     });
   }
